@@ -70,8 +70,8 @@ module URBANopt
           banner "\nAdditional config options can be set with the 'runner.conf' file inside your project folder"
           banner 'Fewer warnings are presented when using full paths and the user is not inside the project folder'
         end
-        return if ARGV.empty?
-        @command = ARGV.shift
+#        return if ARGV.empty?
+        @command = "create" # Hard code an arg for testing purposes
         send("opt_#{@command}") ## dispatch to command handling method
       end
 
@@ -287,6 +287,7 @@ module URBANopt
 
       config_file = 'https://raw.githubusercontent.com/urbanopt/urbanopt-cli/master/example_files/runner.conf'
       example_feature_file = 'https://raw.githubusercontent.com/urbanopt/urbanopt-cli/master/example_files/example_project.json'
+      # FIXME: Gemfile is TEMPORARILY pointint to branch. Restore to master before merging to master.
       example_gem_file = 'https://raw.githubusercontent.com/urbanopt/urbanopt-cli/master/example_files/Gemfile'
       remote_weather_files = [
         'https://raw.githubusercontent.com/urbanopt/urbanopt-cli/master/example_files/weather/USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw',
