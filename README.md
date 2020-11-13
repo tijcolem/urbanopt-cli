@@ -2,6 +2,7 @@
 # Test commit
 # Test commit 2
 # Test commit 3
+# Test commit 4
 
 This is the command line interface (CLI) for URBANopt.
 
